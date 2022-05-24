@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+    --border-radius: .5rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-color: var(--very-light-gray);
+
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    width: 83%;
+}
+
+/* Header */
+.header {
+    margin-bottom: 5rem;
+
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 1.5rem;
+
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: var(--very-dark-blue);
+}
+
+.header span {
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    color: var(--grayish-blue);
+}
+
+/* Card section */
+.card {
+    margin: 2.5rem 0;
+    box-shadow: 0rem 1.3rem 1.5rem 0rem hsla(212, 37%, 51%, 0.2);
+    border-width: .3rem;
+    border-top-style: solid; 
+    border-radius: var(--border-radius);
+    padding: 2rem 2.8rem 2.7rem 3rem;
+
+    background-color: white;
+}
+
+.card h2 {
+    margin-bottom: .3rem;
+
+    font-size: 2.1rem;
+    color: var(--very-dark-blue);
+}
+
+.card p {
+    margin-bottom: 3.2rem;
+
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    color: var(--grayish-blue);
+}
+
+.icon {
+    display: flex;
+    justify-content: right;
+}
+
+.icon img {
+    width: 22%;
+}
+
+.first-card {
+    border-top-color: var(--cyan);
+}
+
+.second-card {
+    border-top-color: var(--red);
+}
+
+.third-card {
+    border-top-color: var(--orange);
+}
+
+.fourth-card {
+    border-top-color: var(--blue);
+}
+
+@media only screen and (min-width: 401px) {
+    main {
+        align-items: center;
+        
+        margin-top: 6rem;
+        width: 100%;
+    }
+
+    /* Header */
+    .header {
+        margin-bottom: 6.5rem;
+        width: 50rem;
+    }
+
+    .header h1 {
+        font-size: 3.5rem;
+    }
+
+    .header p {
+        font-size: 1.45rem;
+        line-height: 2.3rem;
+    }
+
+    /* Card grid section*/
+    .card-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.8rem;
+
+        margin-bottom: 12rem;
+    }
+
+    .first-column,
+    .third-column {
+        display: flex;
+        align-items: center;
+    }
+
+    .first-column {
+        grid-column: 1 / 2;
+    }
+
+    .center-column {
+        grid-column: 2 / 3;
+    }
+
+    .third-column {
+        grid-column: 3 / 4;
+    }
+
+    /* Card section*/
+    .card {
+        margin: 0;
+        border-width: .5rem;
+        padding: 2.4rem 3rem 3rem 3rem;
+    }
+
+    .card h2 {
+        margin-bottom: .7rem;
+
+        font-size: 1.9rem;
+    }
+
+    .card p {
+        margin-bottom: 4rem;
+        width: 27rem;
+
+        font-size: 1.25rem;
+        line-height: 2.2rem;
+    }
+
+    .second-card {
+        margin-bottom: 2.7rem;
+    }
+}
